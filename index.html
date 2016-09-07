@@ -127,7 +127,32 @@
     <h2>What the heck is a <code>*.spt</code> file?</h2>
 
     <p>Aspen files are <a href="http://simplates.org/">simplates</a>
-    (<code>*.spt</code>), templates with a Python header.</p>
+    (<code>*.spt</code>), templates with a Python header. Here's an
+    example:</p>
+
+    <pre>import random
+
+[----]
+program = request.qs['program']
+excitement = "!" * random.randint(1, 10)
+
+[----] text/html via stdlib_format
+&lt;h1&gt;Greetings, {program}{excitement}&lt;/h1&gt;
+
+[----] text/plain via stdlib_format
+Greetings, {program}{excitement}
+
+[----] application/json via json_dump
+{ "program": program
+, "excitement": excitement
+ }</pre>
+
+
+    <ul>
+        <li><a href="https://github.com/gratipay/simplate.vim">Vim</a></li>
+        <li><a href="https://github.com/gratipay/simplates.emacs">Emacs</a></li>
+        <li><a href="https://github.com/Changaco/kate-highlightings/blob/master/simplate.xml">Kate</a></li>
+    </ul>
 
 </section>
 
