@@ -1,182 +1,189 @@
-<style>
-    @font-face {
-        font-family: 'The Sans-Serif';
-        src: url('spartan/spartan.eot');
-        src: url('spartan/spartan.eot?#iefix') format('embedded-opentype'),
-             url('spartan/spartan.woff2') format('woff2'),
-             url('spartan/spartan.woff') format('woff'),
-             url('spartan/spartan.ttf') format('truetype'),
-             url('spartan/spartan.svg#spartan') format('svg');
-        font-weight: bold;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'The Serif';
-        src: url('prociono/prociono.eot');
-        src: url('prociono/prociono.eot?#iefix') format('embedded-opentype'),
-             url('prociono/prociono.woff2') format('woff2'),
-             url('prociono/prociono.woff') format('woff'),
-             url('prociono/prociono.ttf') format('truetype'),
-             url('prociono/prociono.svg#prociono') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
+<!doctype html>
+<html>
+    <head>
+        <title>Aspen - Filesystem dispatch since 2006</title>
+        <style>
+            @font-face {
+                font-family: 'The Sans-Serif';
+                src: url('spartan/spartan.eot');
+                src: url('spartan/spartan.eot?#iefix') format('embedded-opentype'),
+                     url('spartan/spartan.woff2') format('woff2'),
+                     url('spartan/spartan.woff') format('woff'),
+                     url('spartan/spartan.ttf') format('truetype'),
+                     url('spartan/spartan.svg#spartan') format('svg');
+                font-weight: bold;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'The Serif';
+                src: url('prociono/prociono.eot');
+                src: url('prociono/prociono.eot?#iefix') format('embedded-opentype'),
+                     url('prociono/prociono.woff2') format('woff2'),
+                     url('prociono/prociono.woff') format('woff'),
+                     url('prociono/prociono.ttf') format('truetype'),
+                     url('prociono/prociono.svg#prociono') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        font: normal 24px/48px "The Serif";
-        background: url("bg.png") repeat;
-    }
-    h2 {
-        font: bold 36px/42px "The Sans-Serif";
-    }
-    pre {
-        font: normal 18px/22px monospace;
-        color: #00D844;
-        background: #000;
-        border: 2px solid #DCD8CF;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 48px;
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font: normal 24px/48px "The Serif";
+                background: url("bg.png") repeat;
+            }
+            h2 {
+                font: bold 36px/42px "The Sans-Serif";
+            }
+            pre {
+                font: normal 18px/22px monospace;
+                color: #00D844;
+                background: #000;
+                border: 2px solid #DCD8CF;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 48px;
+            }
 
-    .banner {
-        padding: 200px;
-        text-align: center;
-    }
-    .banner h2 {
-        padding: 0 0 64px 210px;
-        font-size: 22px;
-        line-height: 30px;
-    }
-    .banner a {
-        display: block;
-        width: 260px;
-        margin-right: 20px;
-        float: left;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        padding: 20px;
-    }
-    .banner a img {
-        width: 200px;
-    }
-    .banner a span {
-        display: block;
-        font-size: 14px;
-        padding: 20px 0 0;
-    }
-    .banner a:hover {
-        background: white;
-        box-shadow: 1px 1px 3px #CCC;
-    }
+            .banner {
+                padding: 200px;
+                text-align: center;
+            }
+            .banner h2 {
+                padding: 0 0 64px 210px;
+                font-size: 22px;
+                line-height: 30px;
+            }
+            .banner a {
+                display: block;
+                width: 260px;
+                margin-right: 20px;
+                float: left;
+                border: 1px solid transparent;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            .banner a img {
+                width: 200px;
+            }
+            .banner a span {
+                display: block;
+                font-size: 14px;
+                padding: 20px 0 0;
+            }
+            .banner a:hover {
+                background: white;
+                box-shadow: 1px 1px 3px #CCC;
+            }
 
-    .faq {
-        clear: both;
-        background: url("bg2.png") repeat;
-        color: #DCD8CF;
-        padding: 50px 200px 150px;
-    }
-    .faq h2 {
-        padding: 100px 0 30px;
-        color: #FEE9B0;
-    }
-    .faq a {
-        color: #DCD8CF;
-    }
+            .faq {
+                clear: both;
+                background: url("bg2.png") repeat;
+                color: #DCD8CF;
+                padding: 50px 200px 150px;
+            }
+            .faq h2 {
+                padding: 100px 0 30px;
+                color: #FEE9B0;
+            }
+            .faq a {
+                color: #DCD8CF;
+            }
 
-    footer {
-        padding: 50px 200px;
-        font: normal 16px/20px "The Serif";
-    }
-    footer img {
-        display: inline-block;
-        width: 80px;
-    }
-</style>
+            footer {
+                padding: 50px 200px;
+                font: normal 16px/20px "The Serif";
+            }
+            footer img {
+                display: inline-block;
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="banner">
+            <h1><img src="aspen.png" alt="Aspen"></h1>
+            <h2>Filesystem dispatch since 2006</h2>
 
-<section class="banner">
-    <h1><img src="aspen.png" alt="Aspen"></h1>
-    <h2>Filesystem dispatch since 2006</h2>
+            <a href="http://django.aspen.io/">
+                <h3><img src="django.svg" alt="for Django"></h3>
+                <span>django-aspen &#x279a;</span>
+            </a>
 
-    <a href="http://django.aspen.io/">
-        <h3><img src="django.svg" alt="for Django"></h3>
-        <span>django-aspen &#x279a;</span>
-    </a>
+            <a href="http://flask.aspen.io/">
+                <h3><img src="flask.png" alt="for Flask"></h3>
+                <span>Flask-Aspen</span>
+            </a>
 
-    <a href="http://flask.aspen.io/">
-        <h3><img src="flask.png" alt="for Flask"></h3>
-        <span>Flask-Aspen</span>
-    </a>
+            <a href="http://pando.aspen.io/">
+                <h3><img src="pando.png" alt="Pando"></h3>
+                <span>a microframework</span>
+            </a>
+        </section>
 
-    <a href="http://pando.aspen.io/">
-        <h3><img src="pando.png" alt="Pando"></h3>
-        <span>a microframework</span>
-    </a>
-</section>
+        <section class="faq">
 
-<section class="faq">
+            <h2>What is filesystem dispatch?</h2>
 
-    <h2>What is filesystem dispatch?</h2>
-
-    <p>Path in address bar &rarr; Path on filesystem. Done.</p>
-
-
-    <h2>Why should I care?</h2>
-
-    <p>You should care about filesystem dispatch if using regular expressions
-    or decorators or object traversal for dispatch makes your brain
-    hurt.</p>
+            <p>Path in address bar &rarr; Path on filesystem. Done.</p>
 
 
-    <h2>What about variable path parts?</h2>
+            <h2>Why should I care?</h2>
 
-    <p>Capture URL path parts with filesystem paths like
-    <code>www/%year/index.spt</code>.</p>
-
-
-    <h2>What the heck is a <code>*.spt</code> file?</h2>
-
-    <p>A so-called &ldquo;spitfile&rdquo; is a simplate, a template with a
-    Python header or two. Here's an example:</p>
-
-    <pre>import random
-
-[----]
-program = request.qs['program']
-excitement = "!" * random.randint(1, 10)
-
-[----] text/html via stdlib_format
-&lt;h1&gt;Greetings, {program}{excitement}&lt;/h1&gt;
-
-[----] text/plain via stdlib_format
-Greetings, {program}{excitement}
-
-[----] application/json via json_dump
-{ "program": program
-, "excitement": excitement
- }</pre>
+            <p>You should care about filesystem dispatch if using regular expressions
+            or decorators or object traversal for dispatch makes your brain
+            hurt.</p>
 
 
-    <ul>
-        <li><a href="https://github.com/gratipay/simplate.vim">Vim</a></li>
-        <li><a href="https://github.com/gratipay/simplates.emacs">Emacs</a></li>
-        <li><a href="https://github.com/Changaco/kate-highlightings/blob/master/simplate.xml">Kate</a></li>
-    </ul>
+            <h2>What about variable path parts?</h2>
 
-</section>
+            <p>Capture URL path parts with filesystem paths like
+            <code>www/%year/index.spt</code>.</p>
 
-<footer>
 
-    <img src="aspen.png" alt="Aspen">
-    &copy; 2006&mdash;2016, <a href="https://twitter.com/whit537">Chad Whitacre</a>
-    &amp; contributors.
-    MIT.
-    <a href="https://hackerone.com/aspen">Security</a>.
-    <a href="https://github.com/AspenWeb/">GitHub</a>.
+            <h2>What the heck is a <code>*.spt</code> file?</h2>
 
-</footer>
+            <p>A so-called &ldquo;spitfile&rdquo; is a simplate, a template with a
+            Python header or two. Here's an example:</p>
+
+            <pre>import random
+
+        [----]
+        program = request.qs['program']
+        excitement = "!" * random.randint(1, 10)
+
+        [----] text/html via stdlib_format
+        &lt;h1&gt;Greetings, {program}{excitement}&lt;/h1&gt;
+
+        [----] text/plain via stdlib_format
+        Greetings, {program}{excitement}
+
+        [----] application/json via json_dump
+        { "program": program
+        , "excitement": excitement
+         }</pre>
+
+
+            <ul>
+                <li><a href="https://github.com/gratipay/simplate.vim">Vim</a></li>
+                <li><a href="https://github.com/gratipay/simplates.emacs">Emacs</a></li>
+                <li><a href="https://github.com/Changaco/kate-highlightings/blob/master/simplate.xml">Kate</a></li>
+            </ul>
+
+        </section>
+
+        <footer>
+
+            <img src="aspen.png" alt="Aspen">
+            &copy; 2006&mdash;2016, <a href="https://twitter.com/whit537">Chad Whitacre</a>
+            &amp; contributors.
+            MIT.
+            <a href="https://hackerone.com/aspen">Security</a>.
+            <a href="https://github.com/AspenWeb/">GitHub</a>.
+
+        </footer>
+    </body>
+</html>
