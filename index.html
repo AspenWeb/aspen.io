@@ -1,42 +1,58 @@
 <style>
+    @import url("font/stylesheet.css");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     body {
         text-align: center;
-        font: normal 24px sans-serif;
+        font: normal 24px "League Spartan";
         padding: 200px;
+        background: url("bg.png") repeat;
     }
     p {
+        padding: 0 0 64px 328px;
     }
     a {
         display: block;
         width: 260px;
         margin-right: 20px;
         float: left;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        box-shadow: 1px 1px 3px #CCC;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 20px;
     }
-    a p {
+    a img {
+        width: 200px;
+    }
+    a span {
+        display: block;
         font-size: 14px;
+        padding: 20px 0 0;
+    }
+    a:hover {
+        background: white;
+        box-shadow: 1px 1px 3px #CCC;
     }
 </style>
 
-<p>Aspen provides filesystem routing for Python web frameworks.</p>
+<h1><img src="aspen.png" alt="Aspen"></h1>
 
-<p>Say goodbye to regular expressions!</p>
-
-<p>Pick your flavor:</p>
+<p>Filesystem Routing</p>
 
 <a href="django">
-    <h2>django-aspen</h2>
-    <p>plugin for Django</p>
+    <h2><img src="django.svg" alt="for Django"></h2>
+    <span>django-aspen</span>
 </a>
 
 <a href="flask">
-    <h2>Flask-Aspen</h2>
-    <p>plugin for Flask</p>
+    <h2><img src="flask.png" alt="for Flask"></h2>
+    <span>Flask-Aspen</span>
 </a>
 
-<a href="/pando">
-    <h2>Pando</h2>
-    <p>standalone framework</p>
+<a href="pando">
+    <h2><img src="pando.png" alt="Pando"></h2>
+    <span>a microframework</span>
 </a>
