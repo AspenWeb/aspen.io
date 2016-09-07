@@ -1,16 +1,25 @@
 <style>
-    @import url("spartan/stylesheet.css");
+    @font-face {
+        font-family: 'The Sans-Serif';
+        src: url('spartan/spartan.eot');
+        src: url('spartan/spartan.eot?#iefix') format('embedded-opentype'),
+             url('spartan/spartan.woff2') format('woff2'),
+             url('spartan/spartan.woff') format('woff'),
+             url('spartan/spartan.ttf') format('truetype'),
+             url('spartan/spartan.svg#spartan') format('svg');
+        font-weight: bold;
+        font-style: normal;
+    }
     @font-face {
         font-family: 'The Serif';
-        src: url('prociono/Prociono-Regular-webfont.eot');
-        src: url('prociono/Prociono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-             url('prociono/Prociono-Regular-webfont.woff2') format('woff2'),
-             url('prociono/Prociono-Regular-webfont.woff') format('woff'),
-             url('prociono/Prociono-Regular-webfont.ttf') format('truetype'),
-             url('prociono/Prociono-Regular-webfont.svg#league_spartanbold') format('svg');
+        src: url('prociono/prociono.eot');
+        src: url('prociono/prociono.eot?#iefix') format('embedded-opentype'),
+             url('prociono/prociono.woff2') format('woff2'),
+             url('prociono/prociono.woff') format('woff'),
+             url('prociono/prociono.ttf') format('truetype'),
+             url('prociono/prociono.svg#prociono') format('svg');
         font-weight: normal;
         font-style: normal;
-
     }
 
     * {
@@ -23,7 +32,7 @@
         background: url("bg.png") repeat;
     }
     h2 {
-        font: bold 36px/42px "League Spartan";
+        font: bold 36px/42px "The Sans-Serif";
     }
 
     .banner {
@@ -126,7 +135,7 @@
 
     <h2>What the heck is a <code>*.spt</code> file?</h2>
 
-    <p>A so-called &ldquo;spitfile&rdquo; is a simplate, a template with a
+    <p>A so-called &ldquo;spitfile&rdquo; is a <i>simplate</i>, a template with a
     Python header or two. Here's an example:</p>
 
     <pre>import random
