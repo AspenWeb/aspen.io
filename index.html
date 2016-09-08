@@ -72,7 +72,7 @@
             .frameworks h2 {
                 background: url("img/bg2.png") repeat;
                 color: #FEE9B0;
-                padding: 1vw 4vw;
+                padding: 0.75em 4vw 0.5em;
             }
             .frameworks h2 span {
                 width: 50%;
@@ -82,17 +82,18 @@
                 position: relative;
                 display: block;
                 border-top: 0.1vmax solid #190800;
-                height: 10vw;
+            }
+            .framework:nth-of-type(1) {
+                border-top: none;
             }
             .framework > a {
                 display: block;
                 height: 10vw;
+                border: 0.4vmax solid transparent;
             }
             .framework > a:hover {
-                background: url("img/bg.png") repeat;
-            }
-            .framework:nth-of-type(1) {
-                border-top: none;
+                border-color: #FEE9B0;
+                background: radial-gradient(ellipse closest-side at 60% 33%, white, #FEE9B0);
             }
             .framework img.logo {
                 position: absolute;
