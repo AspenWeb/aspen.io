@@ -93,7 +93,15 @@
             }
             .framework > a:hover {
                 border-color: #FEE9B0;
+            }
+            .framework.django > a:hover {
+                background: radial-gradient(ellipse closest-side at 62% 33%, white, #FEE9B0);
+            }
+            .framework.flask > a:hover {
                 background: radial-gradient(ellipse closest-side at 60% 33%, white, #FEE9B0);
+            }
+            .framework.pando > a:hover {
+                background: radial-gradient(ellipse closest-side at 56% 33%, white, #FEE9B0);
             }
             .framework img.logo {
                 position: absolute;
@@ -162,7 +170,7 @@
         <section class="frameworks">
             <h2>Framework? <span>Use &hellip;</span></h2>
 
-            <div class="framework">
+            <div class="framework django">
                 <a href="http://django.aspen.io/" alt="Aspen for Django">
                     <h3><img src="img/django.svg" alt="Django" class="logo"></h3>
                     <span>django-aspen</span>
@@ -177,7 +185,7 @@
                    aria-label="Star AspenWeb/django-aspen on GitHub">Star</a>
             </div>
 
-            <div class="framework">
+            <div class="framework flask">
                 <a href="http://flask.aspen.io/" alt="Aspen for Flask">
                     <h3><img src="img/flask.svg" alt="Flask" class="logo"></h3>
                     <span>Flask-Aspen</span>
@@ -192,7 +200,7 @@
                    aria-label="Star AspenWeb/Flask-Aspen on GitHub">Star</a>
             </div>
 
-            <div class="framework">
+            <div class="framework pando">
                 <a href="http://pando.aspen.io/" alt="Pando">
                     <h3><img src="img/pando.svg" alt="Pando" class="logo"></h3>
                     <span>Pando</span>
