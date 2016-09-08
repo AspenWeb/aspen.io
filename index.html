@@ -36,7 +36,7 @@
                 background: url("img/bg.png") repeat;
             }
             h2 {
-                font: bold 36px/42px "The Sans-Serif";
+                font: bold 2.5vw/2.5vw "The Sans-Serif";
             }
             pre {
                 font: normal 18px/22px monospace;
@@ -48,45 +48,79 @@
                 margin: 48px;
             }
 
-            .banner {
-                padding: 200px;
-                text-align: center;
+            header {
+                padding: 2vw 5vw;
             }
-            .banner h2 {
-                padding: 0 0 64px 210px;
-                font-size: 22px;
-                line-height: 30px;
+            header h1 img {
+                width: 40vw;
             }
-            .banner a {
-                display: block;
-                width: 260px;
-                margin-right: 20px;
-                float: left;
-                border: 1px solid transparent;
-                border-radius: 10px;
-                padding: 20px;
+            header h2 {
+                position: absolute;
+                text-align: right;
+                right: 10vw;
+                top: 13.8vw;
             }
-            .banner a img {
-                width: 200px;
-            }
-            .banner a span {
-                display: block;
-                font-size: 14px;
-                padding: 20px 0 0;
-            }
-            .banner a:hover {
+
+            .frameworks {
+                position: relative;
+                border: 0.2vmax solid #190800;
                 background: white;
-                box-shadow: 1px 1px 3px #CCC;
+                top: -12vw;
+                left: 20vw;
+                width: 70vw;
+            }
+            .frameworks h2 {
+                background: url("img/bg2.png") repeat;
+                color: #FEE9B0;
+                padding: 1vw 4vw;
+            }
+            .frameworks h2 span {
+                float: right;
+            }
+            .frameworks iframe {
+                position: absolute;
+                bottom: 1vw;
+                right: 4vw;
+            }
+            .framework {
+                position: relative;
+                display: block;
+                border-top: 0.1vmax solid #190800;
+                height: 10vw;
+            }
+            .framework > a {
+                display: block;
+                height: 10vw;
+            }
+            .framework:nth-of-type(1) {
+                border-top: none;
+            }
+            .framework img.logo {
+                position: absolute;
+                height: 6vw;
+                left: 4vw;
+                top: 2vw;
+            }
+            .framework span {
+                font: bold 2.5vw/2.5vw "The Sans-Serif";
+                display: block;
+                position: absolute;
+                top: 2vw;
+                right: 4vw;
+                color: #00E;
+            }
+            .framework:hover {
+                background: url("img/bg.png") repeat;
             }
 
             .faq {
-                clear: both;
                 background: url("img/bg2.png") repeat;
                 color: #DCD8CF;
-                padding: 50px 200px 150px;
+                padding: 10vw 10vw 10vw 20vw;
+                margin-top: -17.5vw;
             }
             .faq h2 {
-                padding: 100px 0 30px;
+                padding: 10vw 0 3vw;
                 color: #FEE9B0;
             }
             .faq h2:nth-of-type(2) {
@@ -115,26 +149,61 @@
                 width: 80px;
             }
         </style>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
     <body>
-        <section class="banner">
-            <h1><img src="img/aspen.png" alt="Aspen"></h1>
+        <header>
+            <h1><img src="img/aspen.svg" alt="Aspen"></h1>
             <h2>Filesystem dispatch since 2006</h2>
+        </header>
 
-            <a href="http://django.aspen.io/">
-                <h3><img src="img/django.svg" alt="for Django"></h3>
-                <span>django-aspen &#x279a;</span>
-            </a>
+        <section class="frameworks">
+            <h2>Framework? <span>Use &hellip;</span></h2>
 
-            <a href="http://flask.aspen.io/">
-                <h3><img src="img/flask.png" alt="for Flask"></h3>
-                <span>Flask-Aspen</span>
-            </a>
+            <div class="framework">
+                <a href="http://django.aspen.io/" alt="Aspen for Django">
+                    <h3><img src="img/django.svg" alt="Django" class="logo"></h3>
+                    <span>django-aspen</span>
+                </a>
+                <a class="github-button"
+                   href="https://github.com/AspenWeb/django-aspen"
+                   data-icon="octicon-star"
+                   data-style="mega"
+                   data-count-href="/AspenWeb/django-aspen/stargazers"
+                   data-count-api="/repos/AspenWeb/django-aspen#stargazers_count"
+                   data-count-aria-label="# stargazers on GitHub"
+                   aria-label="Star AspenWeb/django-aspen on GitHub">Star</a>
+            </div>
 
-            <a href="http://pando.aspen.io/">
-                <h3><img src="img/pando.png" alt="Pando"></h3>
-                <span>a microframework</span>
-            </a>
+            <div class="framework">
+                <a href="http://flask.aspen.io/" alt="Aspen for Flask">
+                    <h3><img src="img/flask.svg" alt="Flask" class="logo"></h3>
+                    <span>Flask-Aspen</span>
+                </a>
+                <a class="github-button"
+                   href="https://github.com/AspenWeb/Flask-Aspen"
+                   data-icon="octicon-star"
+                   data-style="mega"
+                   data-count-href="/AspenWeb/Flask-Aspen/stargazers"
+                   data-count-api="/repos/AspenWeb/Flask-Aspen#stargazers_count"
+                   data-count-aria-label="# stargazers on GitHub"
+                   aria-label="Star AspenWeb/Flask-Aspen on GitHub">Star</a>
+            </div>
+
+            <div class="framework">
+                <a href="http://pando.aspen.io/" alt="Pando">
+                    <h3><img src="img/pando.svg" alt="Pando" class="logo"></h3>
+                    <span>pando</span>
+                </a>
+                <a class="github-button"
+                   href="https://github.com/AspenWeb/pando.py"
+                   data-icon="octicon-star"
+                   data-style="mega"
+                   data-count-href="/AspenWeb/pando.py/stargazers"
+                   data-count-api="/repos/AspenWeb/pando.py#stargazers_count"
+                   data-count-aria-label="# stargazers on GitHub"
+                   aria-label="Star AspenWeb/pando.py on GitHub">Star</a>
+            </div>
         </section>
 
         <section class="faq">
@@ -192,7 +261,7 @@ Greetings, {program}{excitement}
 
         <footer>
 
-            <img src="img/aspen.png" alt="Aspen">
+            <img src="img/aspen.svg" alt="Aspen">
             &copy; 2006&mdash;2016, <a href="https://twitter.com/whit537">Chad Whitacre</a>
             &amp; contributors.
             MIT.
