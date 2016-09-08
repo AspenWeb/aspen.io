@@ -89,8 +89,21 @@
                 padding: 100px 0 30px;
                 color: #FEE9B0;
             }
+            .faq h2:nth-of-type(2) {
+                padding-top: 27px;
+            }
             .faq a {
                 color: #DCD8CF;
+            }
+
+            .dispatch-visual {
+                position: relative;
+                width: 100vw;
+                padding: 0 200px;
+                margin-left: -200px;
+                z-index: 1;
+                height: 507px;
+                background: url("visual.png") 80px 36px no-repeat;
             }
 
             footer {
@@ -128,14 +141,16 @@
 
             <h2>What is filesystem dispatch?</h2>
 
-            <p>Path in address bar &rarr; Path on filesystem. Done.</p>
+            <div class="dispatch-visual">
+                <p>Path in address bar &rarr; path on filesystem. Done.</p>
+            </div>
 
 
             <h2>Why should I care?</h2>
 
-            <p>You should care about filesystem dispatch if using regular expressions
-            or decorators or object traversal for dispatch makes your brain
-            hurt.</p>
+            <p>You should care about filesystem dispatch if using regular
+            expressions or decorators or object traversal for dispatch makes
+            your heart sink and your brain hurt.</p>
 
 
             <h2>What about variable path parts?</h2>
