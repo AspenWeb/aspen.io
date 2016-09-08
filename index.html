@@ -75,12 +75,8 @@
                 padding: 1vw 4vw;
             }
             .frameworks h2 span {
+                width: 50%;
                 float: right;
-            }
-            .frameworks iframe {
-                position: absolute;
-                bottom: 1vw;
-                right: 4vw;
             }
             .framework {
                 position: relative;
@@ -91,6 +87,9 @@
             .framework > a {
                 display: block;
                 height: 10vw;
+            }
+            .framework > a:hover {
+                background: url("img/bg.png") repeat;
             }
             .framework:nth-of-type(1) {
                 border-top: none;
@@ -104,13 +103,15 @@
             .framework span {
                 font: bold 2.5vw/2.5vw "The Sans-Serif";
                 display: block;
-                position: absolute;
-                top: 2vw;
-                right: 4vw;
+                width: 50%;
+                float: right;
                 color: #00E;
+                padding: 2vw 0 0;
             }
-            .framework:hover {
-                background: url("img/bg.png") repeat;
+            .frameworks iframe {
+                position: absolute;
+                bottom: 1vw;
+                left: 50%;
             }
 
             .faq {
