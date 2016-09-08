@@ -234,22 +234,24 @@
             <p>A so-called &ldquo;spitfile&rdquo; is a simplate, a template with a
             Python header or two. Here's an example:</p>
 
-            <pre>import random
+            <pre style='color:#cfcfc2;background-color:#232629;'>
+<span style='color:#27ae60;'>import</span> random
 
-[----]
-program = request.qs['program']
-excitement = "!" * random.randint(1, 10)
+<span style='color:#2980b9;background:#153042;'>[----]</span>
+program = request.qs[<span style='color:#f44f4f;'>'program'</span>]
+excitement = <span style='color:#f44f4f;'>'!'</span> * random.randint(<span style='color:#f67400;'>1</span>, <span style='color:#f67400;'>10</span>)
 
-[----] text/html via stdlib_format
-&lt;h1&gt;Greetings, {program}{excitement}&lt;/h1&gt;
+<span style='color:#2980b9;background:#153042;'>[----] text/html via jinja2</span>
+<b>&lt;h1&gt;</b>Greetings, {{ program }}{{ excitement }}<b>&lt;/h1&gt;</b>
 
-[----] text/plain via stdlib_format
+<span style='color:#2980b9;background:#153042;'>[----] text/plain via stdlib_format</span>
 Greetings, {program}{excitement}
 
-[----] application/json via json_dump
-{ "program": program
-, "excitement": excitement
- }</pre>
+<span style='color:#2980b9;background:#153042;'>[----] application/json via json_dump</span>
+{ &quot;program&quot;: program
+, &quot;excitement&quot;: excitement
+ }
+</pre>
 
 
             <ul>
