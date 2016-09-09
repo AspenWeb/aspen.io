@@ -37,6 +37,7 @@
             }
             h2 {
                 font: bold 2.5vw/2.5vw "The Sans-Serif";
+                padding: 10vw 0 3vw;
             }
             pre {
                 font: normal 18px/22px monospace;
@@ -60,6 +61,7 @@
                 text-align: right;
                 right: 10vw;
                 top: 13.8vw;
+                padding: 0;
             }
 
             .frameworks {
@@ -128,15 +130,20 @@
             .faq {
                 background: url("img/bg2.png") repeat;
                 color: #DCD8CF;
-                padding: 10vw 10vw 10vw 20vw;
                 margin-top: -17.5vw;
             }
+            .faqround {
+                background: radial-gradient( ellipse farthest-corner at 33% 33%
+                                           , rgba(255,255,255,0.1)
+                                           , transparent
+                                            );
+                padding: 10vw 10vw 10vw 20vw;
+            }
             .faq h2 {
-                padding: 10vw 0 3vw;
                 color: #FEE9B0;
             }
             .faq h2:nth-of-type(2) {
-                padding-top: 27px;
+                padding-top: 8vw;
             }
             .faq a {
                 color: #DCD8CF;
@@ -152,9 +159,20 @@
                 background: url("img/visual.png") 80px 36px no-repeat;
             }
 
+            .plugins {
+                padding: 2vw 20vw;
+            }
+            .plugin {
+            }
+
             footer {
                 padding: 5vw 20vw;
                 font: normal 1.5vw/1.5vw "The Sans-Serif";
+                background: url("img/bg2.png") repeat;
+                color: #DCD8CF;
+            }
+            footer a {
+                color: #DCD8CF;
             }
         </style>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -214,7 +232,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq"><div class="faqround">
 
             <h2>What is filesystem dispatch?</h2>
 
@@ -260,18 +278,28 @@ Greetings, {program}{excitement}
  }
 </pre>
 
+        </div></section>
 
+        <section class="plugins">
+            <h2>Editor Support</h2>
             <ul>
                 <li><a href="https://github.com/gratipay/simplate.vim">Vim</a></li>
                 <li><a href="https://github.com/gratipay/simplates.emacs">Emacs</a></li>
-                <li><a href="https://github.com/Changaco/kate-highlightings/blob/master/simplate.xml">Kate</a></li>
+                <li><a href="https://github.com/changaco/kate-highlightings/blob/master/simplate.xml">Kate</a></li>
             </ul>
 
+            <h2>Plugins</h2>
+            <ul>
+                <li><a href="https://pypi.python.org/pypi/aspen-jinja2">aspen-jinja2</a></li>
+                <li><a href="https://pypi.python.org/pypi/aspen-pystache">aspen-pystache</a></li>
+                <li><a href="https://pypi.python.org/pypi/aspen-sentry">aspen-sentry</a></li>
+                <li><a href="https://pypi.python.org/pypi/aspen-tornado">aspen-tornado</a></li>
+            </ul>
         </section>
 
         <footer>
 
-            &copy; 2006&ndash;<script>document.write(new Date().getFullYear());</script>,
+            &copy; 2006&ndash;<script>document.write(new Date().getFullYear());</script>
             <a href="https://twitter.com/whit537">Chad Whitacre</a>
             &amp; contributors.
             MIT.
